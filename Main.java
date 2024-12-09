@@ -1,7 +1,7 @@
 /**
  * Main.java - Driver class to demonstrate revised historical examples
- * 
- * @author ???
+ * AI was used to aid in this project
+ * @author Caden Clark
  * @version ???
  */
 
