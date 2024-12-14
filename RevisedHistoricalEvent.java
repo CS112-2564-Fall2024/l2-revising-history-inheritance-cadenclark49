@@ -10,7 +10,7 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
     //Constructors
     public RevisedHistoricalEvent(String description, Date eventDay, String revisedDescription, String citation) {
         super(description, eventDay);
-        this.serRevisedDescription(revisedDescription);
+        this.setRevisedDescription(revisedDescription);
         this.setCitation(citation);
     }
 
@@ -20,7 +20,7 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
 
     public RevisedHistoricalEvent(RevisedHistoricalEvent original) {
         if (original != null) {
-            this.setAll(original.getDescription(), original.getEventDay(), original.revisedDecription,
+            this.setAll(original.getDescription(), original.getEventDay(), original.revisedDescription,
                     original.citation);
         } else {
             System.out.println("ERROR: null data given to copy constructor");
@@ -38,8 +38,7 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
     }
 
     public boolean setAll(String description, Date eventDay, String revisedDescription, String citation){
-        if (!super.setAll(description, eventDay) {
-                this.setRevisedDescription(revisedDescription);
+        if (!super.setAll(description, eventDay)) {
                 this.setRevisedDescription(revisedDescription);
                 this.setCitation(citation);
                 return true;
@@ -64,15 +63,16 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
                 + this.revisedDescription + "\n\nSource: " + this.citation;
     }
     
-    @Overridepublic
-    boolean equals(Object other) {
-        if (other = null) {
+    @Override
+    public boolean equals(Object other) {
+        if (other == null) {
             return false;
         } else if (this.getClass() != other.getClass()) {
             return false;
         } else {
             RevisedHistoricalEvent otherEvent = (RevisedHistoricalEvent) other;
             this.citation.equals(otherEvent.citation);
+            return this.citation.equals(otherEvent.citation);
         }
     }
     } 

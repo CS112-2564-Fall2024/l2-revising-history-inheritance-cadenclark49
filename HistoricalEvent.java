@@ -1,7 +1,7 @@
 public class HistoricalEvent {
 
 //Constants
-public static final String DEFAULT_Description = "Historical event description default.";
+public static final String DEFAULT_DESCRIPTION = "Historical event description default.";
 
 public static final Date DEFAULT_EVENT_DAY = new Date();
 
@@ -11,7 +11,7 @@ private Date eventDay;
 
 //Constructors
 public HistoricalEvent(String description, Date eventDay) {
-    if (!this.setAll()) {
+    if (!this.setAll(description, eventDay)) {
         System.out.println("ERROR: bad data given to full constructor");
         System.exit(0);
     }
