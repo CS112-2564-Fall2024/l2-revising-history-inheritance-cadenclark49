@@ -11,7 +11,7 @@ private Date eventDay;
 
 //Constructors
 public HistoricalEvent(String description, Date eventDay) {
-    if (!this.setAll(descriptionEventDay)) {
+    if (!this.setAll()) {
         System.out.println("ERROR: bad data given to full constructor");
         System.exit(0);
     }
